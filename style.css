@@ -1,0 +1,59 @@
+body {
+  background-color: rgb(46, 46, 46);
+}
+
+.game {
+  width: 500px;
+  background-color: rgb(8, 11, 14);
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  font: 5em monospace;
+  margin: auto;
+}
+.game * {
+  border-radius: 2px;
+  margin: 5px 5px;
+}
+.game .result {
+  background-color: #E6ACAC;
+  flex: 0 80%;
+  word-wrap: break-word;
+}
+.game .result:after {
+  content: "\0000a0";
+}
+.game .divider {
+  flex: 1 100%;
+  border: 5px solid #fff;
+}
+.game .number, .game .operator, .game .remove, .game .control {
+  background-color: #ACC4E6;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.game .number {
+  flex: 1 0 45%;
+}
+.game .operator {
+  flex: 1 1 30%;
+}
+.game .disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.game .valid {
+  background-color: #ACDB72;
+}
+.game .remove {
+  background-color: red;
+}
+.game .control {
+  background-color: yellow;
+  flex: 1 0 40%;
+}
